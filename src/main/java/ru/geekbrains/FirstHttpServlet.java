@@ -1,6 +1,5 @@
 package ru.geekbrains;
 
-import com.sun.net.httpserver.HttpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +19,15 @@ public class FirstHttpServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("<h1>FirstHttpServlet</h1>");
         resp.getWriter().println("<p>getContextPath: " + req.getContextPath() + "</p>");
+        resp.getWriter().println("<p>getPathTranslated: " + req.getPathTranslated() + "</p>");
+        resp.getWriter().println("<p>getRequestURI: " + req.getRequestURI() + "</p>");
+        resp.getWriter().println("<p>getRemoteHost: " + req.getRemoteHost() + "</p>");
+        resp.getWriter().println("<p>getRemoteAddr: " + req.getRemoteAddr() + "</p>");
+        resp.getWriter().println("<p>getLocalAddr: " + req.getLocalAddr() + "</p>");
+        resp.getWriter().println("<p>getProtocol: " + req.getProtocol() + "</p>");
+        resp.getWriter().println("<p>getRemotePort: " + req.getRemotePort() + "</p>");
+        resp.getWriter().println("<p>getServerPort: " + req.getServerPort() + "</p>");
+        resp.getWriter().println("<p>getLocalPort: " + req.getLocalPort() + "</p>");
         resp.getWriter().println("<p>getServletPath: " + req.getServletPath() + "</p>");
         resp.getWriter().println("<p>getPathInfo: " + req.getPathInfo() + "</p>");
         resp.getWriter().println("<p>getQueryString: " + req.getQueryString() + "</p>");
