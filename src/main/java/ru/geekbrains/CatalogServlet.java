@@ -18,6 +18,6 @@ public class CatalogServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("doGet Catalog");
-        resp.getWriter().println("<h1>Catalog</h1>");
+        getServletContext().getRequestDispatcher("/catalog.jsp").forward(req, resp);
     }
 }

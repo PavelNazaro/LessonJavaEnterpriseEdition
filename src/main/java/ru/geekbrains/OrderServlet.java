@@ -18,6 +18,6 @@ public class OrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("doGet Order");
-        resp.getWriter().println("<h1>Order</h1>");
+        getServletContext().getRequestDispatcher("/order.jsp").forward(req, resp);
     }
 }

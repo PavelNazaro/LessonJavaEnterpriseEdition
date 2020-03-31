@@ -20,11 +20,11 @@ public class HttpFilter implements Filter {
         servletResponse.setCharacterEncoding("UTF-8");
         servletResponse.setContentType("text/html");
         filterChain.doFilter(servletRequest, servletResponse);
-        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/main'>Main</a>");
-        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/catalog'>Catalog</a>");
-        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/product'>Product</a>");
-        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/cart'>Cart</a>");
-        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/order'>Order</a>");
+//        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/main'>Main</a>");
+//        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/catalog'>Catalog</a>");
+//        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/product'>Product</a>");
+//        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/cart'>Cart</a>");
+//        servletResponse.getWriter().println("<a href='" + servletRequest.getServletContext().getContextPath() + "/order'>Order</a>");
 //        servletResponse.getWriter().println("<h1>FOOTER</h1>");
     }
 
