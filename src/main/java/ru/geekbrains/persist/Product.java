@@ -1,15 +1,19 @@
-package ru.geekbrains;
+package ru.geekbrains.persist;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Product {
+
     private Long id;
+
     private String name;
+
     private String description;
+
     private BigDecimal price;
 
-    public Product(){
-
+    public Product() {
     }
 
     public Product(Long id, String name, String description, BigDecimal price) {
@@ -49,5 +53,18 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id.equals(product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
